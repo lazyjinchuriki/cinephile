@@ -35,9 +35,9 @@ Once you have installed Cinephile, you can use it by opening it in your web brow
 
 Here are some screenshots of Cinephile in action:
 
-![Homepage screenshot](/screenshots/homepage.png)
-![Search results screenshot](/screenshots/search-results.png)
-![Movie details screenshot](/screenshots/movie-details.png)
+![Homepage screenshot](/screenshots/homepage.png "Homepage")
+![Search results screenshot](/screenshots/search.png "Search Result")
+![Genre filter screenshot](/screenshots/filter.png "Genre Filtering")
 
 ## Credits
 
@@ -58,4 +58,13 @@ If you have any questions or concerns, you can contact the author of this projec
 If you found Cinephile useful, consider buying me a coffee! 
 
 [![Buy me a coffee](https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg)](https://www.buymeacoffee.com/lazyjinchuriki)
+
+## Social
+
+If you are not coding right now, You can check my social accounts.
+
+[Instagram](https://www.instagram.com/amundaneguy/)
+
+[Linkedin](https://www.linkedin.com/in/rahul-khushalani-77ab21201/)
+
 
