@@ -5,7 +5,7 @@ const BASE_url = 'https://api.themoviedb.org/3';
 const API_url = BASE_url + 'discover/movie?sort_by=vote_average.desc&' + API_key + '&vote_count.gte=50';
 const IMG_url = 'https://image.tmdb.org/t/p/w500'
 const SEARCH_url = 'https://api.themoviedb.org/3/search/movie?api_key=4b153b123319df27bb67fcbfe219537d&query='
-const TV_url = BASE_url + '/tv/popular?' + API_key + '&vote_count.gte=50';
+const TV_url = BASE_url + '/tv/popular?' + API_key + '&vote_count.gte=100';
 //  const TV_url = BASE_url + '/tv/top_rated?' + API_key
 // const Tv_Img_url = BASE_url + '/tv/' + {id} + '/images?' + API_key
 const TV_Search_url = 'https://api.themoviedb.org/3/search/tv?' + API_key + '&query='
