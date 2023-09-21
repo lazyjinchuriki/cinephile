@@ -1,11 +1,13 @@
 # Cinephile
-<a href="https://lazyjinchuriki.github.io/cinephile/"><img src="https://img.shields.io/badge/Visit%20My-Website-blue"></a>
+[![Visit My Website](https://img.shields.io/badge/Visit%20My-Website-blue?style=for-the-badge&logo=arrow-right&logoColor=white)](https://lazyjinchuriki.github.io/cinephile/)
 
-Cinephile is a Movies and TvShows finder website that allows you to get an overview and trailer of popular movies and shows. You can even search for your favorite Movies and Shows and get an overview and trailer for them.
+Cinephile is a `Movies` and `TvShows` finder website that allows you to get an overview and trailer of popular movies and shows. You can even search for your favorite Movies and Shows and get an overview and trailer for them.
 
-The website is built with basic HTML, CSS, and vanilla JavaScript, and uses TMDB API to fetch data on movies and TV shows.
+The website is built with basic HTML, CSS, and vanilla JavaScript, and uses `TMDB API` to fetch data on movies and TV shows.
 
+## Tech Stacks
 
+ ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) 
 
 ## Features
 
@@ -29,7 +31,7 @@ To install Cinephile, follow these steps:
 
 ## Usage
 
-Once you have installed Cinephile, you can use it by opening it in your web browser.
+Once you have installed Cinephile, you can use it by opening `index.html` in your web browser.
 
 ## Screenshots
 
@@ -55,16 +57,15 @@ If you have any questions or concerns, you can contact the author of this projec
 
 ### Donations
 
-If you found Cinephile useful, consider buying me a coffee! 
+If you found Gallery useful, consider buying me a coffee!
 
-[![Buy me a coffee](https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg)](https://www.buymeacoffee.com/lazyjinchuriki)
+<a href="https://www.buymeacoffee.com/lazyjinchuriki">
+  <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" width="150" height="50">
+</a>
 
 ## Social
 
-If you are not coding right now, You can check my social accounts.
+If you're not coding right now, check out my socials:
 
-[Instagram](https://www.instagram.com/amundaneguy/)
-
-[Linkedin](https://www.linkedin.com/in/rahul-khushalani-77ab21201/)
-
-
+[![Instagram](https://img.shields.io/badge/Instagram-%40amundaneguy-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/amundaneguy/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Rahul%20Khushalani-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rahul-khushalani-77ab21201/)
