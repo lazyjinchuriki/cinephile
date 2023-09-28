@@ -1,7 +1,7 @@
 # Cinephile
 [![Visit My Website](https://img.shields.io/badge/Visit%20My-Website-blue?style=for-the-badge&logo=arrow-right&logoColor=white)](https://lazyjinchuriki.github.io/cinephile/)
 
-Cinephile is a `Movies` and `TvShows` finder website that allows you to get an overview and trailer of popular movies and shows. You can even search for your favorite Movies and Shows and get an overview and trailer for them.
+Cinephile is a `Movies` and `TvShows` finder website that allows you to get an overview and trailer of popular movies and shows. You can even search for your favourite Movies and Shows and get an overview and trailer for them.
 
 The website is built with basic HTML, CSS, and vanilla JavaScript, and uses `TMDB API` to fetch data on movies and TV shows.
 
