@@ -356,6 +356,7 @@ main {
   border-radius: 4px;
   user-select: none;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .scrollable-tabs-container .tag.active{
