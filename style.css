@@ -297,7 +297,9 @@ main {
   height: 100%;
 }
 
-
+.scrollable-tabs-container:hover{
+  cursor: pointer;
+}
 
 
 
