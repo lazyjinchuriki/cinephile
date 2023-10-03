@@ -262,11 +262,19 @@ function openNav(movie) {
 }
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
+// 
+
 function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+  const overlay = document.getElementById("myNav");
+  overlay.style.width = "0%";
+  const embedClass = document.querySelectorAll('.embed');
+  embedClass.forEach(embedTag => {
+    embedTag.src = '';
+    embedTag.parentNode.removeChild(embedTag);
+  });
+  activeSlide = 0;
 }
 
-var activeSlide = 0
 function showVideos(){
   let embedClass = document.querySelectorAll('.embed');
   embedClass.forEach((embedTag, idx)=>{
