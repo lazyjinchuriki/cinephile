@@ -80,8 +80,15 @@ main {
   position: relative;
   overflow: hidden;
   border-radius: 3px;
-}
 
+}
+.movie:hover{
+  cursor: pointer;
+   box-shadow: 0 8px 18px rgba(255, 255, 255, 0.5), 0 0 32px rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+    z-index: 2;
+    transition: all 0.4s ease-in-out;
+}
 
 .tvshow {
   width: 300px;
@@ -147,7 +154,7 @@ main {
   padding: 0.25rem 0.5rem;
   background-color: rgba(0, 0, 0, 0.63);
   border-radius: 3px;
-  z-index: 1;
+  z-index: 0.9;
 }
 
 .overview {
