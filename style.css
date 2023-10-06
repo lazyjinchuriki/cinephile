@@ -166,6 +166,14 @@ main {
   display: none;
 }
 
+.overview .overview-content {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  line-clamp: 10; 
+  -webkit-box-orient: vertical;
+}
+
 .movie:hover img, .tvshow:hover img {
   filter: brightness(0.5);
 }

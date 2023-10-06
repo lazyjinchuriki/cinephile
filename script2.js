@@ -212,7 +212,9 @@ function showTvShows(data){
     </div>
     <div class="overview">
   <h3>${name}</h3>
+  <span class="overview-content">
   ${overview}
+  </span>
   <br>
   <button class="knowmore" id="${id}">Know More</button>
   </span>
