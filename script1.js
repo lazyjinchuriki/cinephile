@@ -213,7 +213,7 @@ function showMovies(data){
         </div>
         <div class="overview">
         <span>
-      <h3>Overview</h3>
+      <h3>${title}</h3>
       ${overview}
       <br>
       <button class="knowmore" id="${id}">Know More</button>

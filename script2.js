@@ -211,7 +211,7 @@ function showTvShows(data){
   <span class="${getColor(vote_average)}">${vote_average}</span>
     </div>
     <div class="overview">
-  <h3>Overview</h3>
+  <h3>${name}</h3>
   ${overview}
   <br>
   <button class="knowmore" id="${id}">Know More</button>

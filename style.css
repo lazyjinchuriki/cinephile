@@ -96,10 +96,12 @@ main {
 
 .movie img {
   width: 100%;
+  transition: all 0.3s ease-in;
 }
 
 .tvshow img {
   width: 100%;
+  transition: all 0.3s ease-in;
 }
 
 .movie-info {
@@ -145,7 +147,7 @@ main {
   padding: 0.25rem 0.5rem;
   background-color: rgba(0, 0, 0, 0.63);
   border-radius: 3px;
-
+  z-index: 1;
 }
 
 .overview {
@@ -162,6 +164,10 @@ main {
 }
 .overview::-webkit-scrollbar{
   display: none;
+}
+
+.movie:hover img, .tvshow:hover img {
+  filter: brightness(0.5);
 }
 
 .movie:hover .overview {
