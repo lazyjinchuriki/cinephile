@@ -8,7 +8,6 @@ const TV_url = BASE_url + '/tv/popular?' + API_key + '&vote_count.gte=100';
 const TV_Search_url = 'https://api.themoviedb.org/3/search/tv?' + API_key + '&query='
 
 
-
 //Array of all the genres of movies.
 const genres = [
     {
@@ -129,10 +128,30 @@ window.addEventListener("DOMContentLoaded", (ev)=>{
         let whichPage = localStorage.getItem('page');
         if(whichPage == 'movie'){
             localStorage.setItem('page', 'tv');
+            let tv_svg = `<svg class="switch" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-movie" viewBox="0 0 24 24" stroke-width="2" stroke="#7378c5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+            <path d="M8 4l0 16"></path>
+            <path d="M16 4l0 16"></path>
+            <path d="M4 8l4 0"></path>
+            <path d="M4 16l4 0"></path>
+            <path d="M4 12l16 0"></path>
+            <path d="M16 8l4 0"></path>
+            <path d="M16 16l4 0"></path>
+            </svg>`;
+            pgChange.innerHTML = tv_svg;
             LoadDataAndDisplay();
         }
         else if (whichPage == 'tv'){
             localStorage.setItem('page', 'movie');
+            let movie_svg = `<svg class="switch" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-desktop" viewBox="0 0 24 24" stroke-width="2" stroke="#7378c5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 4m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z"></path>
+            <path d="M7 20l10 0"></path>
+            <path d="M9 16l0 4"></path>
+            <path d="M15 16l0 4"></path>
+            </svg>`;
+            pgChange.innerHTML = movie_svg;
             LoadDataAndDisplay();
         }
     })
@@ -364,8 +383,8 @@ function showMovies(data){
     main.appendChild(movieEl)
 
     document.getElementById(id).addEventListener('click', ()=>{
-        console.log(id);
-        // openNav(movie);
+        // console.log(id);
+        openNav(movie);
     })
     })
 }
@@ -403,7 +422,7 @@ function showTvShows(data){
   
     document.getElementById(id).addEventListener('click', ()=>{
       console.log(id);
-    //   openNav(tvshow);
+      openNav(tvshow);
     })
 })
 }
@@ -447,8 +466,6 @@ function searchResultsAndDisplayWrapper(ev){
 
     }
 }
-
-
 function searchAndDisplay(func, delay){
     let timer;
 
@@ -464,4 +481,77 @@ function searchAndDisplay(func, delay){
         }, delay)
     }
 }
-const searchStart = searchAndDisplay(searchResultsAndDisplayWrapper, 900); 
+const searchStart = searchAndDisplay(searchResultsAndDisplayWrapper, 900);
+
+
+
+function showVideos(){
+    let embedClass = document.querySelectorAll('.embed');
+    embedClass.forEach((embedTag, idx)=>{
+      if(activeSlide == idx){
+        embedTag.classList.add('show');
+        embedTag.classList.remove('hide');
+      }else{
+        embedTag.classList.add('hide');
+        embedTag.classList.remove('show');
+      }
+    })
+}
+
+/* Open when someone clicks on the span element */
+function openNav(tvOrMovie) {
+    let id=tvOrMovie.id;
+    let whichPage = localStorage.getItem('page');
+    let _url;
+    if (whichPage == 'movie'){
+        _url = BASE_url+ '/movie/'+ id + '/videos?' + API_key;
+    }
+    else if (whichPage == 'tv'){
+        _url = BASE_url+ '/tv/'+ id + '/videos?' + API_key;
+    }
+    getVideo(_url);
+}
+
+async function getVideo(url){
+    const overlayContent = document.getElementById('overlay-content');
+
+    let res = await fetch(url);
+    let videoData = await res.json();
+    
+    if(videoData){
+        console.log(videoData);
+        document.getElementById("myNav").style.width = "100%";
+        if(videoData.results.length > 0){
+            var embed = [];
+            videoData.results.forEach(video => {
+            let{name,key,site,type} = video;
+
+            if(site == 'YouTube' && type == 'Trailer'){
+            embed.push(`
+            <div class="video-container">
+            <iframe  width="560" height="315" class="embed hide" frameborder="0" src="https://www.youtube.com/embed/${key}" title="${name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            `)
+            }
+            })
+
+            overlayContent.innerHTML = embed.join('');
+            activeSlide=0;
+            showVideos();
+        }
+        else{
+            overlayContent.innerHTML = `
+            <h1 style = "color: white;"> WOW! SUCH EMPTY 🙂 </h1>`
+        }
+    }
+}
+
+function closeNav() {
+    const overlay = document.getElementById("myNav");
+    overlay.style.width = "0%";
+    const embedClass = document.querySelectorAll('.embed');
+    embedClass.forEach(embedTag => {
+      embedTag.src = '';
+      embedTag.parentNode.removeChild(embedTag);
+    });
+    activeSlide = 0;
+}
