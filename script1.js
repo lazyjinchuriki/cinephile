@@ -190,7 +190,19 @@ function highlightSelection(){
   }
 }
 
-
+function getCast(id) {
+  fetch(BASE_url + `/movie/${id}/credits?${API_key}`)
+  .then(res => res.json())
+  .then(creditsData => {
+    const cast = creditsData.cast.slice(0,3);
+    const castNames = cast.map(actor => actor.name).join(', ');
+    // console.log(castNames);
+    document.getElementById("Cast"+id).innerHTML = `Cast : ${castNames}`;
+  })
+  .catch(error => {
+    console.error('Error fetching cast information:', error);
+  });
+}
 
 //dynamically loading the movie data in form of Cards consisting of [Title, Poster, Rating, Overview and Release Date].
 function showMovies(data){
@@ -217,6 +229,7 @@ function showMovies(data){
       <span class="overview-content">
       ${overview}
       </span>
+      <p id = Cast${id}>${getCast(id)}</p>
       <br>
       <button class="knowmore" id="${id}">Know More</button>
       </span>
