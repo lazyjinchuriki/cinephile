@@ -414,3 +414,41 @@ tagsEl.addEventListener("mouseup", ()=>{
     tagsEl.classList.remove("dragging")
     dragging = false;
 })
+
+
+// GSAP ANIMATIONS
+TweenMax.from(".header_gsap", 1, {
+  delay: 0.2,
+  opacity: 0,
+  y: -30,
+  ease: Expo.easeInOut,
+});
+
+TweenMax.from(".filter_gsap", 1, {
+  delay: 0.3,
+  opacity: 0,
+  y: 20,
+  ease: Expo.easeInOut,
+});
+
+TweenMax.from("#main", 1, {
+  delay: 0.6,
+  opacity: 0,
+  y: 20,
+  ease: Expo.easeInOut,
+});
+
+
+ScrollTrigger.batch(".movie", {
+  batchMax: 3, 
+  onEnter: (batch) => {
+    gsap.to(batch, {autoAlpha: 1, stagger: 0.15, overwrite: true})
+  }, 
+});
+
+ScrollTrigger.batch(".tvshow", {
+  batchMax: 3, 
+  onEnter: (batch) => {
+    gsap.to(batch, {autoAlpha: 1, stagger: 0.15, overwrite: true})
+  }, 
+});
