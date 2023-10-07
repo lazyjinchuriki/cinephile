@@ -46,7 +46,8 @@ middle{
 .search {
   width: 96%;
   position: relative;
-  right: 6%;
+  float: right;
+  right: 10%;
   background-color: transparent;
   border: 2px solid var(--primary-color);
   border-radius: 50px;
