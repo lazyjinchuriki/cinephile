@@ -190,19 +190,7 @@ function highlightSelection(){
   }
 }
 
-function getCast(id) {
-  fetch(BASE_url + `/movie/${id}/credits?${API_key}`)
-  .then(res => res.json())
-  .then(creditsData => {
-    const cast = creditsData.cast.slice(0,3);
-    const castNames = cast.map(actor => actor.name).join(', ');
-    // console.log(castNames);
-    document.getElementById("Cast"+id).innerHTML = `Cast : ${castNames}`;
-  })
-  .catch(error => {
-    console.error('Error fetching cast information:', error);
-  });
-}
+
 
 //dynamically loading the movie data in form of Cards consisting of [Title, Poster, Rating, Overview and Release Date].
 function showMovies(data){
@@ -229,7 +217,6 @@ function showMovies(data){
       <span class="overview-content">
       ${overview}
       </span>
-      <p id = Cast${id}>${getCast(id)}</p>
       <br>
       <button class="knowmore" id="${id}">Know More</button>
       </span>
@@ -265,7 +252,7 @@ function openNav(movie) {
           }
         })
 
-        overlayContent.innerHTML = embed.shift(); /* only embed the first video */ 
+        overlayContent.innerHTML = embed.join('');
         activeSlide=0;
         showVideos();
       }else{
@@ -414,41 +401,3 @@ tagsEl.addEventListener("mouseup", ()=>{
     tagsEl.classList.remove("dragging")
     dragging = false;
 })
-
-
-// GSAP ANIMATIONS
-TweenMax.from(".header_gsap", 1, {
-  delay: 0.2,
-  opacity: 0,
-  y: -30,
-  ease: Expo.easeInOut,
-});
-
-TweenMax.from(".filter_gsap", 1, {
-  delay: 0.3,
-  opacity: 0,
-  y: 20,
-  ease: Expo.easeInOut,
-});
-
-TweenMax.from("#main", 1, {
-  delay: 0.6,
-  opacity: 0,
-  y: 20,
-  ease: Expo.easeInOut,
-});
-
-
-ScrollTrigger.batch(".movie", {
-  batchMax: 3, 
-  onEnter: (batch) => {
-    gsap.to(batch, {autoAlpha: 1, stagger: 0.15, overwrite: true})
-  }, 
-});
-
-ScrollTrigger.batch(".tvshow", {
-  batchMax: 3, 
-  onEnter: (batch) => {
-    gsap.to(batch, {autoAlpha: 1, stagger: 0.15, overwrite: true})
-  }, 
-});

@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
 :root {
-  --primary-color: #22254b;
-  --secondary-color: #373b69;
+  --primary-color: #000000;
+  --secondary-color: #232323;
 }
 
 * {
@@ -11,10 +11,18 @@
 
 body {
   background-color: var(--primary-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
-
+.centers{
+  position: absolute;
+  left: 550px;
+}
+h1
+{
+    color: rgb(255, 0, 0);
+    
+}
 header {
   justify-content: space-between;
   padding: 1rem;
@@ -34,7 +42,7 @@ middle{
   width: 50px;
   height: 50px;
   position: relative;
-  border: 2px solid var(--primary-color);
+  border: 1px solid rgb(255, 0, 119);
   border-radius: 50%;
   font-family: inherit;
   padding: 0.5rem 0.5rem;
@@ -50,7 +58,7 @@ middle{
   position: relative;
   right: 6%;
   background-color: transparent;
-  border: 2px solid var(--primary-color);
+  border: 1px solid rgb(255, 0, 119);
   border-radius: 50px;
   font-family: inherit;
   font-size: 1rem;
@@ -86,7 +94,7 @@ main {
 }
 .movie:hover, .tvshow:hover{
   cursor: pointer;
-   box-shadow: 0 8px 18px rgba(255, 255, 255, 0.5), 0 0 32px rgba(0, 0, 0, 0.3);
+   box-shadow: 0 8px 18px rgba(86, 2, 119, 0.5), 0 0 32px rgb(255, 0, 106);
     transform: translateY(-20px);
     z-index: 2;
     transition: all 0.4s ease-in-out;
@@ -160,7 +168,8 @@ main {
 }
 
 .overview {
-  background-color: #fff;
+  background-color: rgba(255, 1, 107,0.8);
+  color: #eee;
   padding: 2rem;
   position: absolute;
   left: 0;
@@ -237,7 +246,8 @@ main {
 }
 
 .knowmore:hover{
-  background-color: var(--primary-color);
+  background-color: white;
+  color: black;
 }
 
 /* The Overlay (background) */
@@ -262,8 +272,6 @@ main {
   width: auto !important; /* 100% width */
   height: auto !important;
   text-align: center; /* Centered text/links */
-  max-width: 1080px;
-  margin: 0 auto; /* centered the wraper */
   margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
@@ -376,7 +384,7 @@ main {
 .scrollable-tabs-container .tag {
   color: white;
   text-decoration: none;
-  background: var(--secondary-color);
+  background: rgb(3, 2, 46);
   padding: 4px 24px;
   display: inline-block;
   border-radius: 4px;
@@ -384,9 +392,16 @@ main {
   white-space: nowrap;
   cursor: pointer;
 }
+.scrollable-tabs-container .tag:hover{
+  background-color: red;
+  color: #000000;
+  box-shadow: 0 0 5px 5px #ff00009d;
+  transition-duration: 1s;
+  transition-property: background-color,color;
+}
 
 .scrollable-tabs-container .tag.active{
-  background-color: rgba(255, 255, 255, 0.508);
+  background-color: rgb(255, 0, 0);
   font-weight: bold;
   color: rgba(0, 0, 0, 0.757);
 
@@ -412,11 +427,11 @@ main {
 .scrollable-tabs-container .right-arrow{
   right: 0;
   justify-content: flex-end;
-  background: linear-gradient(to left, #22254b 50%, transparent);
+  background: linear-gradient(to left, rgba(255, 1, 1, 0.5) 50%, transparent);
 }
 
 .scrollable-tabs-container .left-arrow{
-  background: linear-gradient(to right, #22254b  50%, transparent);
+  background: linear-gradient(to right, rgba(255, 1, 1, 0.5)  50%, transparent);
 }
 
 
