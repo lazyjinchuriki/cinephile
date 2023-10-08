@@ -284,6 +284,8 @@ main {
   width: auto !important; /* 100% width */
   height: auto !important;
   text-align: center; /* Centered text/links */
+  max-width: 1080px;
+  margin: 0 auto; /* centered the wraper */
   margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 

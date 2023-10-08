@@ -191,6 +191,25 @@ function getTvShows(url) {
       }
     });
 }
+function getCast(id) {
+  fetch(BASE_url + `/tv/${id}/credits?${API_key}`)
+  .then(res => res.json())
+  .then(creditsData => {
+    const cast = creditsData.cast.slice(0,3);
+    if(cast == ""){
+      document.getElementById("Cast"+id).innerHTML = `Cast : Unable to fetch cast data 🤧`;
+      // this shows up when cast array inside creditsData is empty, thought this would be better than an empty tag
+    }
+    else{
+      const castNames = cast.map(actor => actor.name).join(', ');
+      // console.log(castNames);
+      document.getElementById("Cast"+id).innerHTML = `Cast : ${castNames}`;
+    }
+  })
+  .catch(error => {
+    console.error('Error fetching cast information:', error);
+  });
+}
 
 function showTvShows(data) {
   main.innerHTML = " ";
@@ -220,6 +239,7 @@ function showTvShows(data) {
   <span class="overview-content">
   ${overview}
   </span>
+  <p id="Cast${id}">${getCast(id)}</p>
   <br>
   <button class="knowmore" id="${id}">Know More</button>
   </span>

@@ -265,7 +265,7 @@ function openNav(movie) {
           }
         })
 
-        overlayContent.innerHTML = embed.join('');
+        overlayContent.innerHTML = embed.shift(); /* only embed the first video */ 
         activeSlide=0;
         showVideos();
       }else{
