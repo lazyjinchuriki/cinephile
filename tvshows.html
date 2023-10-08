@@ -7,26 +7,15 @@
     <title>Movie&TV App</title>
   </head>
   <body>
-    <header class="header_gsap">
+    <header>
+      
       <form id="form">
-        <input type="text" id="search" class="search" placeholder="Search" />
+        <input type="text" id="search" class="search" placeholder="Search">
       </form>
       <a href="index.html">
-        <svg
-          class="switch"
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-movie"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="#7378c5"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
+        <svg class="switch" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-movie" viewBox="0 0 24 24" stroke-width="2" stroke="#7378c5" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path
-            d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
-          ></path>
+          <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
           <path d="M8 4l0 16"></path>
           <path d="M16 4l0 16"></path>
           <path d="M4 8l4 0"></path>
@@ -34,62 +23,41 @@
           <path d="M4 12l16 0"></path>
           <path d="M16 8l4 0"></path>
           <path d="M16 16l4 0"></path>
-        </svg>
+       </svg>
       </a>
     </header>
 
-    <div class="scrollable-tabs-container filter_gsap" >
+    <div class="scrollable-tabs-container">
       <div class="left-arrow">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M15.75 19.5L8.25 12l7.5-7.5"
-          />
-        </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>              
       </div>
-      <div id="tags"></div>
-      <div class="right-arrow active">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-          />
-        </svg>
+      <div id="tags">
       </div>
-    </div>
+  <div class="right-arrow active">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>          
+  </div>
+  </div>
 
-    <div id="myNav" class="overlay " >
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
-      >
+  
 
+    <div id="myNav" class="overlay">
+
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
       <div class="overlay-content" id="overlay-content"></div>
     </div>
-
+    
     <main id="main"></main>
     <div class="pagination">
       <div class="page" id="prev">Prev</div>
       <div class="page" id="current">1</div>
       <div class="page" id="next">Next</div>
     </div>
-    <!--=============== GSAP ===============-->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+
     <script src="script2.js"></script>
   </body>
 </html>
