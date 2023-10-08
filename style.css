@@ -68,6 +68,28 @@ middle{
   background-color: var(--primary-color);
 }
 
+.svg-icon.search-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  float: right;
+  margin-top: -2rem;
+  margin-right: 1.5rem;
+  &:focus,
+  &:hover {
+    .search-path {
+      stroke: #7378c5;
+    }
+  }
+  &:active {
+    .search-path {
+      stroke: var(--primary-color);
+      stroke-width: 2px;
+    }
+  }
+}
+
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -295,6 +317,42 @@ main {
     font-size: 40px;
     top: 15px;
     right: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjusted styles for better mobile experience */
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search {
+    width: 80%;
+    right: 0;
+    margin-left: 0;
+  }
+
+  .page {
+    padding: 8px;
+  }
+
+  .movie, .tvshow {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Additional styles for smaller mobile devices */
+  .search {
+    width: 100%;
+    right: 0;
+    margin-left: 0;
+  }
+
+  .page {
+    padding: 6px;
+    font-size: 0.9rem;
   }
 }
 
