@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--primary-color);
   font-family: 'Poppins', sans-serif;
@@ -435,16 +439,17 @@ body {
   background-color: var(--secondary-color);
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  padding: 15px 0 15px 0;
 }
 
 .footer p {
-  margin-bottom: 20px;
-  font-size: 20px;
+  margin:0;
+  padding-top: 15px;
+  font-size: 10px 15px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .footer-content {
-  display: flex;
   justify-content: center;
   align-items: center; 
   gap: 20px; 
@@ -452,22 +457,68 @@ body {
 
 .icon {
   margin: 0;
+  padding: 10px;
 }
 
-.icon img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%; 
-  transition: transform 0.2s ease-in-out; 
+.icon:hover {
+  transform: scale(1.1); 
 }
 
-/* Add hover effect for the icons */
-.icon:hover img {
-  transform: scale(1.2); 
+svg {
+  color: #fff;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease-in-out; 
 }
 
+.social-top {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.social p {
+  font-size: 20px;
+  padding: 10px;
+}
 
+.social {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
 
+#topBtn p {
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
 
+#topBtn {
+  margin:0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background: none;
+  border: none;
+}
 
+.top-icon{
+  margin: 0;
+  padding: 0;
+}
+
+.top-icon:hover {
+  transform: scale(1.1); 
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.5);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
