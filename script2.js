@@ -193,22 +193,23 @@ function getTvShows(url) {
 }
 function getCast(id) {
   fetch(BASE_url + `/tv/${id}/credits?${API_key}`)
-  .then(res => res.json())
-  .then(creditsData => {
-    const cast = creditsData.cast.slice(0,3);
-    if(cast == ""){
-      document.getElementById("Cast"+id).innerHTML = `Cast : Unable to fetch cast data 🤧`;
-      // this shows up when cast array inside creditsData is empty, thought this would be better than an empty tag
-    }
-    else{
-      const castNames = cast.map(actor => actor.name).join(', ');
-      // console.log(castNames);
-      document.getElementById("Cast"+id).innerHTML = `Cast : ${castNames}`;
-    }
-  })
-  .catch(error => {
-    console.error('Error fetching cast information:', error);
-  });
+    .then((res) => res.json())
+    .then((creditsData) => {
+      const cast = creditsData.cast.slice(0, 3);
+      if (cast == "") {
+        document.getElementById(
+          "Cast" + id
+        ).innerHTML = `Cast : Unable to fetch cast data 🤧`;
+        // this shows up when cast array inside creditsData is empty, thought this would be better than an empty tag
+      } else {
+        const castNames = cast.map((actor) => actor.name).join(", ");
+        // console.log(castNames);
+        document.getElementById("Cast" + id).innerHTML = `Cast : ${castNames}`;
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching cast information:", error);
+    });
 }
 
 function showTvShows(data) {
@@ -437,18 +438,38 @@ TweenMax.from("#main", 1, {
   ease: Expo.easeInOut,
 });
 
-
 ScrollTrigger.batch(".movie", {
-  batchMax: 3, 
+  batchMax: 3,
   onEnter: (batch) => {
-    gsap.to(batch, {autoAlpha: 1, stagger: 0.15, overwrite: true})
-  }, 
+    gsap.to(batch, { autoAlpha: 1, stagger: 0.15, overwrite: true });
+  },
 });
-
 
 ScrollTrigger.batch(".tvshow", {
-  batchMax: 3, 
+  batchMax: 3,
   onEnter: (batch) => {
-    gsap.to(batch, {autoAlpha: 1, stagger: 0.15, overwrite: true})
-  }, 
+    gsap.to(batch, { autoAlpha: 1, stagger: 0.15, overwrite: true });
+  },
 });
+
+// Get the button:
+let mybutton = document.getElementById("topBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
