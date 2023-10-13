@@ -105,28 +105,34 @@ middle{
 /*For any screens at or below 244px.*/
 @media only screen and (max-width: 244px) {
   .search {
-    width: 35vw;
+    width: 23vw;
   }
 }
 
-/*For any screens between 245px and 309px. Devices such as Galaxy Fold*/
+/* For any screens between 245px and 309px. */
 @media only screen and (min-width: 245px) and (max-width: 309px) {
   .search {
-    width: 45vw;
+    width: 30vw;
   }
 }
 
 /*For any screens between 310px and 380px. Devices such as iPhone SE*/
 @media only screen and (min-width: 310px) and (max-width: 380px) {
   .search {
-    width: 50vw;
+    width: 35vw;
+  }
+}
+/*For any screens between 310px and 380px. Devices such as iPhone SE*/
+@media only screen and (min-width: 380px) and (max-width: 500px) {
+  .search {
+    width: 36vw;
   }
 }
 
 /*For any screens between 500px and 599px. Devices such as Pixel 5 and Surface Duo.*/
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .search {
-    width: 55vw;
+    width: 50vw;
   }
 }
 
@@ -138,7 +144,7 @@ middle{
 }
 @media only screen and (min-width: 900) {
   .search {
-    width: 75vw; /*View Width to expand based on user's device width*/
+    width: 70vw; /*View Width to expand based on user's device width*/
   }
 }
 
