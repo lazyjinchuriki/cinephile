@@ -78,6 +78,15 @@ middle{
     background-position: 200% center;
   }
 }
+/* this is for flex container */
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-container img {
+  margin-left: 10px; 
+}
 
 .search {
   width: 90%;
@@ -106,6 +115,12 @@ middle{
 @media only screen and (max-width: 244px) {
   .search {
     width: 23vw;
+    margin-top: 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
   }
 }
 
@@ -113,6 +128,12 @@ middle{
 @media only screen and (min-width: 245px) and (max-width: 309px) {
   .search {
     width: 30vw;
+    margin-top: 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
   }
 }
 
@@ -120,12 +141,30 @@ middle{
 @media only screen and (min-width: 310px) and (max-width: 380px) {
   .search {
     width: 35vw;
+    margin-top: 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
+  }
+  .flex-container img {
+    margin-top: -20px; 
   }
 }
 /*For any screens between 310px and 380px. Devices such as iPhone SE*/
 @media only screen and (min-width: 380px) and (max-width: 500px) {
   .search {
     width: 36vw;
+    margin-top: 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
+  }
+  .flex-container img {
+    margin-top: -20px; 
   }
 }
 
@@ -133,6 +172,15 @@ middle{
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .search {
     width: 50vw;
+    margin-top: 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
+  }
+  .flex-container img {
+    margin-top: -20px; 
   }
 }
 
@@ -141,6 +189,7 @@ middle{
   .search {
     width: 60vw; /*View Width to expand based on user's device width*/
   }
+  
 }
 @media only screen and (min-width: 900) {
   .search {
