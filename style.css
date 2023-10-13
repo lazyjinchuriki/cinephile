@@ -49,13 +49,52 @@ middle{
   background-color: var(--primary-color);
 }
 
+/* for heading */
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 20px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+/* this is for flex container */
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-container img {
+  margin-left: 10px; 
+}
+
 .search {
-  width: 96%;
+  width: 90%;
   position: relative;
-  right: 6%;
+  right: 4%;
   background-color: transparent;
   border: 2px solid var(--primary-color);
-  border-radius: 50px;
+  border-radius: 45px;
   font-family: inherit;
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -75,35 +114,86 @@ middle{
 /*For any screens at or below 244px.*/
 @media only screen and (max-width: 244px) {
   .search {
-    width: 35vw;
+    width: 23vw;
+    margin-top: 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
   }
 }
 
-/*For any screens between 245px and 309px. Devices such as Galaxy Fold*/
+/* For any screens between 245px and 309px. */
 @media only screen and (min-width: 245px) and (max-width: 309px) {
   .search {
-    width: 45vw;
+    width: 30vw;
+    margin-top: 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
   }
 }
 
 /*For any screens between 310px and 380px. Devices such as iPhone SE*/
 @media only screen and (min-width: 310px) and (max-width: 380px) {
   .search {
-    width: 55vw;
+    width: 35vw;
+    margin-top: 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
+  }
+  .flex-container img {
+    margin-top: -20px; 
+  }
+}
+/*For any screens between 310px and 380px. Devices such as iPhone SE*/
+@media only screen and (min-width: 380px) and (max-width: 500px) {
+  .search {
+    width: 36vw;
+    margin-top: 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
+  }
+  .flex-container img {
+    margin-top: -20px; 
   }
 }
 
 /*For any screens between 500px and 599px. Devices such as Pixel 5 and Surface Duo.*/
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .search {
-    width: 65vw;
+    width: 50vw;
+    margin-top: 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
+  }
+  .flex-container img {
+    margin-top: -20px; 
   }
 }
 
 /*For any screens at or above 600px. Enlarges search box to fit laptops, desktops, and TVs.*/
 @media only screen and (min-width: 600px) {
   .search {
-    width: 75vw; /*View Width to expand based on user's device width*/
+    width: 60vw; /*View Width to expand based on user's device width*/
+  }
+  
+}
+@media only screen and (min-width: 900) {
+  .search {
+    width: 70vw; /*View Width to expand based on user's device width*/
   }
 }
 
