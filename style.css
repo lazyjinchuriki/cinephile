@@ -491,6 +491,18 @@ main {
   scrollbar-width: none;
   scroll-behavior: smooth;
 }
+/* Genres - Animation on hover */
+#tags div{
+  transition: 0.3s all;
+}
+
+#tags div:hover{
+  background-color: white;
+  color: #231557;
+  transform: scale(1.1);
+  transition: 0.3s all;
+}
+
 #tags.dragging{
   scroll-behavior: auto;
 }
@@ -518,7 +530,6 @@ main {
   background-color: rgba(255, 255, 255, 0.508);
   font-weight: bold;
   color: rgba(0, 0, 0, 0.757);
-
 }
 
 .scrollable-tabs-container .right-arrow,
