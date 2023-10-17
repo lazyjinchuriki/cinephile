@@ -297,15 +297,6 @@ main {
   height: 100%;
 }
 
-.scrollable-tabs-container:hover{
-  cursor: pointer;
-}
-
-
-
-
-
-
 .scrollable-tabs-container{
   max-width: 100%;
   margin: 16px auto;
@@ -398,4 +389,60 @@ main {
 
 .scrollable-tabs-container svg:hover{
   background: var(--secondary-color);
+}
+.scrollable-tabs-container:hover{
+  cursor: pointer;
+}
+
+.footer{
+  padding: 50px 15% 10px;
+  border-top: 4px solid #777;
+  color:whitesmoke;
+}
+.row{
+  display: flex;
+  width:100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.footer h2{
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.footer .col{
+  flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+.footer .col a{
+  display: block;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer .col a:hover{
+  color: #777;
+}
+.footer .row{
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.footer button{
+  color: whitesmoke;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+.footer but{
+  color:#777;
+}
+.copyright{
+  font-size: 14px;
+  margin-top:20px;
+  margin-bottom: 10px;
 }
