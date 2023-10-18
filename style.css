@@ -19,6 +19,25 @@ body {
   margin: 0;
 }
 
+body::-webkit-scrollbar {
+  width: 12px; 
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 40px; 
+  background-color: #7378c5;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #4d5293; 
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 2px 2px 5px #2d2d2d;
+  background-color: #eeeeee;
+}
+
 header {
   justify-content: space-between;
   padding: 1rem;
