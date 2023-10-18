@@ -90,7 +90,7 @@ const genres = [
 
 // run after loading page
 window.addEventListener("DOMContentLoaded", (ev)=>{
-    console.log("page loaded");
+    // console.log("page loaded");
     let main = document.querySelector('#main');
 
     // set the genre categories
@@ -181,9 +181,19 @@ window.addEventListener("DOMContentLoaded", (ev)=>{
     
     let searchBar = document.querySelector('.search');
     searchBar.addEventListener('input', searchStart);
+
+
+    let copyRightYear = document.getElementById("copyright-year");
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
+    copyRightYear.innerText = currentYear;
+    
 })
 
-
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
 // set all genres on the page
 let selectedGenre=[]
@@ -555,3 +565,4 @@ function closeNav() {
     });
     activeSlide = 0;
 }
+
