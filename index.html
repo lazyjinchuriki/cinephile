@@ -6,21 +6,8 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="./screenshots/favicon.png" type="image/x-icon" />
     <title>Movie&TV App</title>
-    <style>
-      ::-webkit-scrollbar {
-        width: 12px;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: #7378c5; 
-        border-radius: 6px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background: #f0f0f0; 
-      }
-    </style>
   </head>
+
   <body>
     <!-- for searchbar and switch icon -->
     <header class="header_gsap">
@@ -28,21 +15,18 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <div class="flex-container">
-              <a href="index.html">
-              <h2 class="animate-charcter larger-text text-effect">CINEPHILE</h2>
-              </a>
-              <a href="index.html">
-              <img class="logo" src="images/logo.png" alt="logo" width="50" height="50" />
-              </a>
+                <h2 class="animate-charcter larger-text text-effect">CINEPHILE</h2>
+                <img class="logo" src="images/logo.png" alt="logo" width="50" height="50" />
             </div>
           </div>
         </div>
       </div>
+
       <form id="form">
         <input type="text" id="search" class="search" placeholder="Search" />
       </form>
-      <a href="tvshows.html">
-        <div class="switch-button-container">
+      <div class="pageChange">
+      
         <svg
           class="switch"
           xmlns="http://www.w3.org/2000/svg"
@@ -53,6 +37,7 @@
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"
+        
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <path
@@ -62,13 +47,12 @@
           <path d="M9 16l0 4"></path>
           <path d="M15 16l0 4"></path>
         </svg>
-        <span class="page-name">Movies</span>
-        </div>
-      </a>
+      </div>
+
     </header>
 
     <!-- genre filter tags here -->
-    <div class="scrollable-tabs-container filter_gsap">
+    <div class="scrollable-tabs-container">
       <div class="left-arrow">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -84,9 +68,10 @@
             d="M15.75 19.5L8.25 12l7.5-7.5"
           />
         </svg>
-        
       </div>
+
       <div id="tags"></div>
+
       <div class="right-arrow active">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -123,6 +108,7 @@
       <div class="page" id="next">Next</div>
     </div>
 
+
     <button
       onclick="topFunction()"
       id="topBtn"
@@ -148,7 +134,7 @@
         />
       </svg>
     </button>
-    <!-- footer -->
+    
     <div class="footer">
       <div class="footer-content">
         <div class="social-top">
@@ -211,11 +197,8 @@
         </div>
       </div>
     </div>
-     <!-- copyright-year Script -->
-     <script src="./copyrightYear.js"></script>
-    <!--=============== GSAP ===============-->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="script1.js"></script>
+
+    <script src="script_main.js"></script>
+
   </body>
 </html>
