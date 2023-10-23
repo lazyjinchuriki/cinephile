@@ -591,13 +591,22 @@ body {
 
 /* Footer styles */
 .footer {
-  background-color: var(--secondary-color);
+  background-color:#333;
   color: #fff;
   text-align: center;
   padding: 15px 0 15px 0;
 }
 
-.footer p {
+.contact-text {
+  margin:0;
+  padding-top: 15px;
+  font-size: 10px 15px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0;
+}
+
+.copy{
   margin:0;
   padding-top: 15px;
   font-size: 10px 15px;
@@ -626,9 +635,12 @@ svg {
   height: 30px;
   transition: transform 0.3s ease-in-out; 
 }
-
+.all{
+  margin-top: 10px;
+  align-items: center;
+}
 .social-top {
-  display: flex;
+  
   margin: 0 auto;
   width: 90%;
   justify-content: space-between;
@@ -641,10 +653,11 @@ svg {
 }
 
 .social {
-  display: flex;
+  
   justify-items: center;
   align-items: center;
-}
+} 
+
 
 #topBtn p {
   font-size: 20px;
@@ -732,4 +745,8 @@ hr {
   color: #ff5722; 
 }
 
+.icon a:hover svg path {
+
+  fill:#CBD5E1;
+}
 
