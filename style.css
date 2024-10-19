@@ -635,12 +635,13 @@ svg {
   height: 30px;
   transition: transform 0.3s ease-in-out; 
 }
+
 .all{
   margin-top: 10px;
   align-items: center;
 }
+
 .social-top {
-  
   margin: 0 auto;
   width: 90%;
   justify-content: space-between;
@@ -653,11 +654,13 @@ svg {
 }
 
 .social {
-  
   justify-items: center;
   align-items: center;
-} 
+}
 
+.social a svg {
+  text-decoration: none;
+}
 
 #topBtn p {
   font-size: 20px;
@@ -746,7 +749,6 @@ hr {
 }
 
 .icon a:hover svg path {
-
   fill:#CBD5E1;
 }
 
