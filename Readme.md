@@ -18,8 +18,8 @@ Cinephile offers the following features:
 - View popular movies and TV shows
 - View top-rated movies and TV shows
 - View upcoming movies
-- Filter out movies and shows based on genres.
-- Go no next and previous page.
+- Filter out movies and shows based on genres
+- Go to next and previous page
 
 ## Installation
 
